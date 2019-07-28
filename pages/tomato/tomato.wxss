@@ -1,0 +1,22 @@
+.tomato {
+  height: 100vh;
+  background-color: #eef7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tomato > text {
+  font-size: 28rpx;
+  color: #f6705a;
+}
+
+.tomato > t-clock {
+  margin: 32rpx 0;
+  font-size: 48rpx;
+}
+
+.tomato > t-button {
+  margin: 28rpx 0;
+}

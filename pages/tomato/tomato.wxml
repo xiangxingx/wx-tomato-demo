@@ -1,0 +1,6 @@
+<view class="tomato">
+  <text>距离结束还有</text>
+  <t-clock text="{{time}}" fontSize="48rpx"></t-clock>
+  <t-button text="{{stopOrStart}}" type="change" size="mini" bindtap="clockState"></t-button>
+  <t-button text="放弃" size="mini"></t-button>
+</view>

@@ -1,0 +1,16 @@
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clock text {
+  position: absolute;
+  color: #fff;
+}
+
+.clock image {
+  width: 320rpx;
+  height: 320rpx;
+}

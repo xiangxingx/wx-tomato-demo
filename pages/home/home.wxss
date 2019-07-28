@@ -1,0 +1,65 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f6f6f6;
+}
+
+.item {
+  border: 2rpx solid #fff;
+  margin: 24rpx 30rpx;
+  background: #fff;
+  box-shadow: 0px 1px 8px -5px rgba(0, 0, 0, 0.6);
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+}
+
+.round {
+  height: 24rpx;
+  width: 24rpx;
+  border: 2rpx solid #f8765d;
+  border-radius: 50%;
+  margin: 0 32rpx;
+  flex-shrink: 0;
+}
+
+.active {
+  height: 18rpx;
+  width: 18rpx;
+  border: 4rpx solid white;
+  box-shadow: 0 0 0 2rpx #f8765d;
+  background: #f8765d;
+}
+
+.item > text {
+  font-size: 32rpx;
+  padding: 20rpx 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.set-task {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.set-task .task {
+  position: absolute;
+  top: 40rpx;
+}
+
+.set-task .clock {
+  position: absolute;
+  bottom: 18rpx;
+  padding: 94rpx 196rpx 38rpx 196rpx;
+  border: 1px solid #eef7f6;
+  border-radius: 6px;
+  background: #eef7f6;
+  box-shadow: 0px 1px 8px -5px rgba(0, 0, 0, 0.6);
+}

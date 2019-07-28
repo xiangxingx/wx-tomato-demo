@@ -1,0 +1,17 @@
+<view class="home">
+  <scroll-view scroll-y style="height: 50%;">
+    <view class="item" wx:for="{{lists}}" wx:for-index="index" wx:key="{{item.id}}" bindtap="finishTodo" data-index="{{index}}">
+      <view class="round {{item.finish && 'active'}}"></view>
+      <text>{{item.text}}</text>
+    </view>
+  </scroll-view>
+  <view class="set-task">
+    <view class="clock">
+      <g-clock text="点击开始闹钟"></g-clock>
+    </view>
+    <view class="task">
+      <g-button text="创建任务" type="change" bindtap="setTask"></g-button>
+    </view>
+  </view>
+  <g-confirm visible="{{visible}}" placeholder="" bindconfirm="confirm" bindcancel="cancel"></g-confirm>
+</view>
