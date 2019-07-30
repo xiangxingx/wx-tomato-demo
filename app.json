@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/tomato/tomato",
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs"

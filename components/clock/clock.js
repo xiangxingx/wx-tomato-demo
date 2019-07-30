@@ -4,7 +4,7 @@ Component({
       type: String,
       value: ""
     },
-    fontSize: {
+    clockTextSize: {
       type: String,
       value: "30rpx"
     }

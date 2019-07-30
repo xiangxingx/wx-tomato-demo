@@ -1,9 +1,6 @@
+
 button::after {
   border: none;
-}
-
-.button-hover {
-  opacity: 0.9s;
 }
 
 .tomato-button {
@@ -32,3 +29,4 @@ button::after {
 .tomato-button.mini {
   width: 360rpx;
 }
+

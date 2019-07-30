@@ -1,6 +1,10 @@
-<view class="tomato">
-  <text>距离结束还有</text>
-  <t-clock text="{{time}}" fontSize="48rpx"></t-clock>
-  <t-button text="{{stopOrStart}}" type="change" size="mini" bindtap="clockState"></t-button>
-  <t-button text="放弃" size="mini"></t-button>
+<view>
+  <view class="tomato">
+    <text>距离结束还有</text>
+    <t-clock text="{{time}}" clockTextSize="48rpx"></t-clock>
+    <t-button text="{{stopOrStart}}" type="change" size="mini" bindtap="clockState"></t-button>
+    <t-button text="放弃" size="mini" bindtap="abandon"></t-button>
+  </view>
+  <t-confirm visible="{{visible}}" placeholder="放弃原因" bindconfirm="confirm" bindcancel="cancel"></t-confirm>
+  <t-confirm visible="{{finishVisible}}" placeholder="完成了什么" bindconfirm="finishConfirm" bindcancel="finishCancel"></t-confirm>
 </view>

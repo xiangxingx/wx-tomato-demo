@@ -1,7 +1,7 @@
 <view class="set-task" wx:if="{{visible}}">
   <view class="confirm">
     <view class="form">
-      <textarea class="textarea" bindinput="watchvalue" value="{{value}}">{{placeholder}}</textarea>
+      <textarea class="textarea" bindinput="watchvalue" value="{{value}}" placeholder="{{placeholder}}" placeholder-style="color:#737373;"></textarea>
       <view class="button">
         <view bindtap="confirm">确定</view>
         <view>|</view>

@@ -10,5 +10,5 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-  <navigator url="/pages/home/home?id=1">首页</navigator>
+  <navigator url="/pages/home/home">首页</navigator>
 </view>

@@ -21,6 +21,7 @@ Component({
     },
     watchvalue(event) {
       this.data.value = event.detail.value
-    }
+    },
   }
+
 })

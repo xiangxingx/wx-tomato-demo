@@ -7,11 +7,11 @@
   </scroll-view>
   <view class="set-task">
     <view class="clock">
-      <g-clock text="点击开始闹钟"></g-clock>
+      <g-clock text="点击设置闹钟" clockTextSize="30rpx" bindtap="xxx"></g-clock>
     </view>
     <view class="task">
       <g-button text="创建任务" type="change" bindtap="setTask"></g-button>
     </view>
   </view>
-  <g-confirm visible="{{visible}}" placeholder="" bindconfirm="confirm" bindcancel="cancel"></g-confirm>
+  <g-confirm visible="{{visible}}" placeholder="创建任务" bindconfirm="confirm" bindcancel="cancel"></g-confirm>
 </view>

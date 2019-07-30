@@ -1,10 +1,12 @@
 Page({
   timer: null,
-  timerState: "stop",
+  timerState: "start",
   data: {
     second: 5,
     time: "",
-    stopOrStart: "暂停"
+    stopOrStart: "开始",
+    visible: false,
+    finishVisible: false
   },
 
   setTime() {
@@ -25,8 +27,11 @@ Page({
 
   newTime() {
     if (this.data.time === "00:00") {
-      this.timerState = "start"
       clearInterval(this.timer)
+      this.timerState = "start"
+      this.setData({
+        finishVisible: true
+      })
       this.setData({
         stopOrStart: "开始",
         second: 1500
@@ -35,7 +40,7 @@ Page({
   },
 
   onShow: function() {
-    this.changeTime()
+    this.setTime()
   },
 
   changeTime() {
@@ -67,5 +72,41 @@ Page({
       this.timerState = "stop"
     }
   },
+
+  abandon() {
+    clearInterval(this.timer)
+    this.setData({
+      visible: true
+    })
+  },
+
+  confirm(event) {
+    let content = event.detail
+    console.log(content)
+    wx.navigateBack({
+      to: -1
+    })
+  },
+
+  cancel() {
+    this.changeTime()
+    this.setData({
+      visible: false
+    })
+  },
+
+  finishConfirm(event) {
+    let content = event.detail
+    console.log(content)
+    wx.navigateBack({
+      to: -1
+    })
+  },
+
+  finishCancel() {
+    this.setData({
+      finishVisible: false
+    })
+  }
 
 })

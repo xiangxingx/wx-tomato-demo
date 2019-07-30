@@ -55,6 +55,12 @@ Page({
     this.setData({
       visible: true
     })
+  },
+
+  xxx() {
+    wx.navigateTo({
+      url: '/pages/tomato/tomato'
+    })
   }
 
 })

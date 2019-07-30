@@ -1,1 +1,3 @@
-<button class="tomato-button {{type === 'change' ? 'change' : 'default'}} {{size === 'mini' && 'mini'}}">{{text}}</button>
+<view >
+  <button class="tomato-button {{type === 'change' ? 'change' : 'default'}} {{size === 'mini' && 'mini'}}">{{text}}</button>
+</view>
