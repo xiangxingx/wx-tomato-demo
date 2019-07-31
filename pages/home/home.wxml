@@ -7,7 +7,7 @@
   </scroll-view>
   <view class="set-task">
     <view class="clock">
-      <g-clock text="点击设置闹钟" clockTextSize="30rpx" bindtap="xxx"></g-clock>
+      <g-clock text="点击设置闹钟" clockTextSize="28rpx" bindtap="setClock"></g-clock>
     </view>
     <view class="task">
       <g-button text="创建任务" type="change" bindtap="setTask"></g-button>

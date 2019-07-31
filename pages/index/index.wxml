@@ -11,4 +11,5 @@
     <text class="user-motto">{{motto}}</text>
   </view>
   <navigator url="/pages/home/home">首页</navigator>
+  <navigator url="/pages/home/home">跳转到新页面</navigator>
 </view>

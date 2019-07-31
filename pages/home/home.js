@@ -57,7 +57,7 @@ Page({
     })
   },
 
-  xxx() {
+  setClock() {
     wx.navigateTo({
       url: '/pages/tomato/tomato'
     })

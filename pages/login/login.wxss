@@ -1,0 +1,55 @@
+.login {
+  background: #eef7f6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login .user-picture {
+  height: 240rpx;
+  width: 240rpx;
+  border: 16rpx solid #f7755d;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.login .user-name {
+  margin: 60rpx 0;
+}
+.login .user-name > open-data{
+   padding: 0 26rpx;
+   font-size: 28rpx;
+}
+.login .user-namee::after {
+  margin: 14rpx 0;
+  content: "";
+  display: block;
+  height: 4rpx;
+  border: 1rpx solid #F6705A;
+  background: #F6705A;
+  border-radius: 2rpx;
+  width: 100%;
+}
+
+.login > button {
+  width: 360rpx;
+  height: 80rpx;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  background: linear-gradient(to right, #f69975, #f6705a);
+  box-shadow: 0px 11px 32px 0px rgba(246, 112, 90, 0.3);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button::after {
+  border: none;
+}
+
+.button-hover {
+  opacity: 0.7;
+}
