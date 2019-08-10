@@ -4,7 +4,7 @@ const {
 
 Page({
   data: {
-    scrollBar: "110rpx",
+    scrollBar: "112rpx",
     listbox: "0",
     tomatoes: {},
     todos: {},
@@ -38,14 +38,14 @@ Page({
 
   clickHistory() {
     this.setData({
-      scrollBar: "110rpx",
+      scrollBar: "112rpx",
       listbox: "0"
     })
   },
 
   clickFinish() {
     this.setData({
-      scrollBar: "486rpx",
+      scrollBar: "488rpx",
       listbox: "-750rpx"
     })
   },

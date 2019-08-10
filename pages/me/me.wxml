@@ -9,7 +9,7 @@
     <button open-type="contact">问题反馈</button>
   </view>
   <view class="menus">
-    <view class="menus-Button">
+    <view class="menus-button">
       <text bindtap="clickHistory">番茄历史</text>
       <text bindtap="clickFinish">已经完成</text>
     </view>
@@ -17,7 +17,6 @@
   </view>
 
   <view class="listbox">
-
     <scroll-view class="history" style="transform: translateX({{listbox}})" scroll-y>
       <view class="item" wx:for="{{tomatoes}}" wx:for-index="key" wx:key="index">
         <wxs src="../../utils/formattor.wxs" module="formattor"></wxs>
@@ -39,8 +38,5 @@
         </view>
       </view>
     </scroll-view>
-
   </view>
-
-
 </view>

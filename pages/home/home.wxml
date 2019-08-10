@@ -6,12 +6,8 @@
     </view>
   </scroll-view>
   <view class="set-task">
-    <view class="clock">
-      <g-clock text="点击设置闹钟" clockTextSize="28rpx" bindtap="setClock"></g-clock>
-    </view>
-    <view class="task">
-      <g-button text="创建任务" type="change" bindtap="setTask"></g-button>
-    </view>
+    <g-button class="set-button" text="创建任务" type="change" bindtap="setTask"></g-button>
+    <g-clock class="clock" text="点击设置闹钟" clockTextSize="28rpx" bindtap="setClock"></g-clock>
   </view>
   <g-confirm visible="{{visible}}" placeholder="创建任务" bindconfirm="confirm" bindcancel="cancel"></g-confirm>
 </view>

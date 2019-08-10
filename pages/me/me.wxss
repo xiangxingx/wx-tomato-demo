@@ -54,19 +54,19 @@ button::after {
   margin: 22rpx 0;
 }
 
-.my-page .menus .menus-Button {
+.my-page .menus .menus-button {
   display: flex;
   justify-content: space-around;
-  font-size: 34rpx;
-  line-height: 34rpx;
-  padding: 23rpx 0 15rpx 0;
+  align-items: center;
+  line-height: 28rpx;
+  padding: 30rpx 0 22rpx 0;
 }
 
 .my-page .scroll-bar {
   height: 8rpx;
   width: 154rpx;
   display: block;
-  border: 1rpx solid #f6705a;
+  border: 1rpx solid transparent;
   border-radius: 4rpx;
   background: #f6705a;
   transition: transform 0.3s;
@@ -78,8 +78,7 @@ button::after {
   height: 100%;
 }
 
-.history,
-.finished {
+.history, .finished {
   flex-shrink: 0;
   transition: transform 0.3s;
 }
