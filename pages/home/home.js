@@ -1,47 +1,49 @@
+const {
+  http
+} = require('../../utils/http.js')
+
 Page({
   data: {
-    lists: [{
-        id: 1,
-        text: "今天完成了啦啦啦,今天完成了啦啦啦今天完成了啦啦啦,今天完成了啦啦啦,今天完成了啦啦啦,今天完成了啦啦啦",
-        finish: false
-      },
-      {
-        id: 2,
-        text: "今天完成了哈哈哈",
-        finish: false
-      },
-      {
-        id: 3,
-        text: "今天完成了呵呵呵",
-        finish: false
-      }
-    ],
+    lists: [],
     visible: false
+  },
+
+  onShow() {
+    http.get('/todos?completed=false').then(response => {
+      this.setData({
+        lists: response.response.data.resources
+      })
+    })
   },
 
   confirm(event) {
     let content = event.detail
     if (content) {
-      let todo = [{
-        id: this.data.lists.length + 1,
-        text: content,
-        finish: false
-      }]
-      this.data.lists = todo.concat(this.data.lists)
-      this.setData({
-        lists: this.data.lists
+      http.post('/todos', {
+        description: content
+      }).then(response => {
+        let todo = [response.response.data.resource]
+        console.log(todo)
+        this.data.lists = todo.concat(this.data.lists)
+        this.setData({
+          lists: this.data.lists
+        })
+        this.cancel()
       })
-      this.cancel()
     }
-    console.log(content)
   },
 
   finishTodo(event) {
     let index = event.currentTarget.dataset.index
-    console.log(index)
-    this.data.lists[index].finish = true
-    this.setData({
-      lists: this.data.lists
+    let id = event.currentTarget.dataset.id
+    console.log(`/todos/${id}`)
+    http.put(`/todos/${id}`, {
+      completed: true
+    }).then(response => {
+      this.data.lists[index] = response.response.data.resource
+      this.setData({
+        lists: this.data.lists
+      })
     })
   },
 

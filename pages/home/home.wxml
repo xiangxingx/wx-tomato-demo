@@ -1,8 +1,8 @@
 <view class="home">
   <scroll-view scroll-y style="height: 50%;">
-    <view class="item" wx:for="{{lists}}" wx:for-index="index" wx:key="{{item.id}}" bindtap="finishTodo" data-index="{{index}}">
-      <view class="round {{item.finish && 'active'}}"></view>
-      <text>{{item.text}}</text>
+    <view class="item" wx:for="{{lists}}" wx:for-index="index" wx:key="{{item.id}}" wx:if="{{!item.completed}}">
+      <view class="round {{item.completed && 'active'}}" bindtap="finishTodo" data-index="{{index}}" data-id="{{item.id}}"></view>
+      <text>{{item.description}}</text>
     </view>
   </scroll-view>
   <view class="set-task">

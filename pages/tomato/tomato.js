@@ -2,7 +2,7 @@ Page({
   timer: null,
   timerState: "start",
   data: {
-    second: 5,
+    second: 1500,
     time: "",
     stopOrStart: "开始",
     visible: false,

@@ -9,7 +9,6 @@
   background: #fff;
   display: flex;
   align-items: center;
-  margin-bottom: 22rpx;
 }
 
 .my-page .header .user-picture {
@@ -52,6 +51,7 @@ button::after {
   display: flex;
   flex-direction: column;
   background: #fff;
+  margin: 22rpx 0;
 }
 
 .my-page .menus .menus-Button {
@@ -71,7 +71,51 @@ button::after {
   background: #f6705a;
   transition: transform 0.6s;
 }
-.listbox{
-  overflow: auto;
+
+.listbox {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+
+.history {
+  flex-shrink: 0;
+  transition: transform 0.6s;
+}
+
+.finished {
+  flex-shrink: 0;
+  transition: transform 0.6s;
+}
+
+.item {
+  border: 2rpx solid #fff;
+  margin: 0 30rpx 24rpx 30rpx;
+  background: #fff;
+  box-shadow: 0px 1px 8px -5px rgba(0, 0, 0, 0.6);
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.item .time {
+  font-size: 38rpx;
+  font-weight: bold;
+  padding: 24rpx 32rpx;
+}
+
+.item .content {
+  display: flex;
+  padding: 0 32rpx;
+  padding-bottom: 24rpx;
+  word-break: break-all;
+}
+
+.item .content text {
+  padding-right: 25rpx;
+  flex-shrink: 0;
+}
+
+.item .content detail {
   flex: 1;
+  flex-wrap: wrap;
 }

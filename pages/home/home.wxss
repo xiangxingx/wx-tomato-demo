@@ -30,6 +30,7 @@
   border: 4rpx solid white;
   box-shadow: 0 0 0 2rpx #f8765d;
   background: #f8765d;
+  transition: transform 0.3s;
 }
 
 .item > text {

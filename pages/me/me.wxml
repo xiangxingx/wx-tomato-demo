@@ -15,8 +15,30 @@
     </view>
     <view class="scroll-bar" style="transform: translateX({{scrollBar}})"></view>
   </view>
-  <scroll-view class="listbox" scroll-y>
 
-  </scroll-view>
+  <view class="listbox">
+
+    <scroll-view class="history" style="transform: translateX({{listbox}})" scroll-y>
+      <view class="item" wx:for="{{tomatoes}}" wx:for-index="key" wx:key="index">
+        <view class="time">{{key}}</view>
+        <view class="content" wx:for="{{tomatoes[key]}}" wx:for-index="index">
+          <text>{{item.created_at}}</text>
+          <view class="detail">{{item.description}}</view>
+        </view>
+      </view>
+    </scroll-view>
+
+    <scroll-view class="finished" style="transform: translateX({{listbox}})" scroll-y>
+      <view class="item" wx:for="{{todos}}" wx:for-index="key" wx:key="index">
+        <view class="time">{{key}}</view>
+        <view class="content" wx:for="{{todos[key]}}" wx:for-index="index">
+          <text>{{item.created_at}}</text>
+          <view class="detail">{{item.description}}</view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+
 
 </view>
