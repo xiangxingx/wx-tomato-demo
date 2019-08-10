@@ -20,9 +20,10 @@
 
     <scroll-view class="history" style="transform: translateX({{listbox}})" scroll-y>
       <view class="item" wx:for="{{tomatoes}}" wx:for-index="key" wx:key="index">
-        <view class="time">{{key}}</view>
-        <view class="content" wx:for="{{tomatoes[key]}}" wx:for-index="index">
-          <text>{{item.created_at}}</text>
+        <wxs src="../../utils/formattor.wxs" module="formattor"></wxs>
+        <view class="time">{{formattor.monthFormat(key)}}</view>
+        <view class="content" wx:for="{{tomatoes[key]}}" wx:for-index="index" wx:key="index">
+          <text>{{formattor.dateFormat(item.created_at,"hh:mm")}}</text>
           <view class="detail">{{item.description}}</view>
         </view>
       </view>
@@ -30,9 +31,10 @@
 
     <scroll-view class="finished" style="transform: translateX({{listbox}})" scroll-y>
       <view class="item" wx:for="{{todos}}" wx:for-index="key" wx:key="index">
-        <view class="time">{{key}}</view>
-        <view class="content" wx:for="{{todos[key]}}" wx:for-index="index">
-          <text>{{item.created_at}}</text>
+        <wxs src="../../utils/formattor.wxs" module="formattor"></wxs>
+        <view class="time">{{formattor.monthFormat(key)}}</view>
+        <view class="content" wx:for="{{todos[key]}}" wx:for-index="index" wx:key="index">
+          <text>{{formattor.dateFormat(item.created_at,"hh:mm")}}</text>
           <view class="detail">{{item.description}}</view>
         </view>
       </view>
